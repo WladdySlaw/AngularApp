@@ -1,0 +1,322 @@
+html.js .loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+html.js .loader .loader_inner {
+  background-image: url("../img/preloader.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+body {
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+.app {
+  background-color: #F9F9F9;
+}
+
+.navigation {
+  float: left;
+  height: 100vh;
+  width: 275px;
+  background-color: #2B2F3E;
+  display: inline-block;
+  position: fixed;
+}
+
+.navigation .navigationTitle {
+  font-family: "OpenSansRegular";
+  font-size: 36px;
+  color: #565A69;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: lighter;
+  padding-top: 30px;
+  padding-left: 25px;
+}
+
+.navigation .navigationItems {
+  margin-top: 50px;
+  padding-left: 0;
+}
+
+.navigation .navigationItems li {
+  font-family: "OpenSansRegular";
+  font-size: 18px;
+  color: #FFFFFF;
+  letter-spacing: .7px;
+  list-style: none;
+  padding-left: 30px;
+  display: block;
+  height: 55px;
+  padding-top: 13px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.navigation .navigationItems li:hover {
+  letter-spacing: 3px;
+  padding-left: 35px;
+}
+
+.navigation .navigationItems li.active {
+  background-color: #FF3753;
+}
+
+.items {
+  display: inline-block;
+  float: left;
+  margin-top: 30px;
+  margin-left: 23%;
+  background-color: #FFFFFF;
+  width: 480px;
+  border-radius: 3px;
+  padding: .5em 1.5em;
+  box-shadow: 0 0 10px 5px #dddddd;
+}
+
+.items .itemsTitle {
+  font-size: 36px;
+  font-family: "OpenSansRegular";
+  font-weight: lighter;
+  color: #565A69;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.items .addItem {
+  margin-top: 25px;
+}
+
+.items .addItem .addItemInput {
+  border: 1.7px solid #B3B3B3;
+  border-radius: 4px;
+  height: 40px;
+  width: 290px;
+  font-family: "OpenSansRegular";
+  font-size: 16px;
+  color: #565A69;
+  padding-left: 15px;
+  position: relative;
+  top: 1px;
+}
+
+.items .addItem .addItemButton {
+  float: right;
+  width: 135px;
+  height: 40px;
+  background-color: #27CCC0;
+  border: 1px solid #27CCC0;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: "OpenSansRegular";
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  letter-spacing: 1px;
+}
+
+.items .addItem .addItemButton:hover {
+  letter-spacing: 3px;
+}
+
+.items .itemsList {
+  padding-top: 25px;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-left: -1.5em;
+  height: 500px;
+}
+
+.items .itemsList li.active {
+  border-left: 5px solid #FF2F5A;
+}
+
+.items .itemsList li {
+  list-style: none;
+  border-bottom: 1px solid #F2F2F2;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.5em;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border-left: 5px solid transparent;
+  cursor: pointer;
+}
+
+.items .itemsList li:hover {
+  border-left: 5px solid #FF2F5A;
+}
+
+.items .itemsList li .itemsName {
+  font-family: "OpenSansSemiBold";
+  font-size: 16px;
+  display: inline-block;
+  max-width: 280px;
+}
+
+.items .itemsList li .itemsNum {
+  background-color: #27CCC0;
+  display: inline-block;
+  padding: 2px 11px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.items .itemsList li .itemsNum span {
+  background-color: #FAD3D6;
+  font-family: "OpenSansBold";
+  font-size: 13px;
+  color: white;
+}
+
+.items .itemsList li .itemsDelete {
+  font-family: "OpenSansRegular";
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  background-color: transparent;
+  color: #FF305A;
+  border: 2px solid #FF305A;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  float: right;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  letter-spacing: 1px;
+}
+
+.items .itemsList li .itemsDelete:hover {
+  letter-spacing: 3px;
+}
+
+.comments {
+  display: inline-block;
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: #FFFFFF;
+  width: 480px;
+  border-radius: 3px;
+  padding: .5em 1.5em;
+  box-shadow: 0 0 10px 5px #dddddd;
+}
+
+.comments .commentsTitle {
+  font-size: 36px;
+  font-family: "OpenSansRegular";
+  font-weight: lighter;
+  color: #565A69;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.comments .commentsList {
+  padding-left: 0;
+  height: 590px;
+}
+
+.comments .commentsList li {
+  list-style: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F2F2F2;
+  padding-bottom: 20px;
+}
+
+.comments .commentsList li .commentPic {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  float: left;
+}
+
+.comments .commentsList li .orange.commentPic {
+  background-color: #FF8A00;
+}
+
+.comments .commentsList li .blue.commentPic {
+  background-color: #47568C;
+}
+
+.comments .commentsList li .commentText {
+  font-size: 12px;
+  font-family: "OpenSansRegular";
+  background-color: #FAD3D6;
+  display: inline-block;
+  width: 80%;
+  position: relative;
+  top: 0;
+  margin-top: 0;
+}
+
+.comments .addComment .addCommentPic {
+  background-color: #E6E6E6;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  float: left;
+}
+
+.comments .addComment .addCommentText {
+  height: 70px;
+  width: 80%;
+  border: 2px solid #CCCCCC;
+  font-family: "OpenSansRegular";
+  font-size: 16px;
+  color: #565A69;
+}

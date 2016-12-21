@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Simple Angular App</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/animate/animate.css">
+
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="libs/scrollbar/jquery.mCustomScrollbar.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+
+</head>
+
+<body>
+	<div class="app" ng-app="myApp" ng-controller="myCtrl">
+		<nav class="navigation wow fadeInLeft">
+			<p class="navigationTitle wow fadeInLeft">Main</p>
+			<ul class="navigationItems">
+				<li class="active wow fadeInLeft">Overview</li>
+			</ul>
+		</nav>
+		<div class="items wow fadeInRight">
+			<p class="itemsTitle wow fadeInDown">Items</p>
+			<div class="addItem">
+				<input type="text" class="addItemInput wow fadeInLeft" placeholder="Type name here..." ng-model="addText" ng-keypress="addItemKey($event)">
+				<button class="addItemButton wow fadeInRight" ng-click="addItem()">Add new</button>
+			</div>
+			<ul class="itemsList">
+				<div class="mCustomScrollbar" data-mcs-theme="dark">
+					<li ng-repeat="x in itemList" ng-click="toggleActive(x)" ng-class="{active:x.active}">
+						<p class="itemsName wow fadeInLeft">{{x.name}}</p>
+						<p class="itemsNum wow fadeInLeft"><span>{{x.count}}</span></p>
+						<button class="itemsDelete wow fadeInRight" ng-click="removeItem($index)">Delete</button>
+					</li>
+				</div>
+			</ul>
+		</div>
+		<div class="comments wow fadeInUp">
+			<p class="commentsTitle wow fadeInUp">Comments <span>#2</span></p>
+			<ul class="commentsList">
+				<div class="mCustomScrollbar" data-mcs-theme="dark">
+					<div ng-repeat="items in itemList | filter:true:items.active">
+						<li ng-repeat="comment in items.comments">
+							<span class="commentPic orange"></span>
+							<p class="commentText">{{comment.commentText}}</p>
+						</li>
+					</div>
+				</div>
+			</ul>
+			<div class="addComment">
+				<span class="addCommentPic"></span>
+				<textarea class="addCommentText" ng-keypress="checkIfEnterKeyWasPressed($event)" ng-model="addCommentText"></textarea>
+			</div>
+		</div>
+	</div>
+	
+	<div class="hidden"></div>
+
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	
+	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="libs/waypoints/waypoints.min.js"></script>
+	<script src="libs/animate/animate-css.js"></script>
+	<script src="libs/plugins-scroll/plugins-scroll.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script src="js/common.js"></script>
+	<script src="app/angular.min.js"></script>
+	<script src="app/module/myApp.js"></script>
+	<script src="app/controllers/myCtrl.js"></script>
+</body>
+</html>

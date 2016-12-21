@@ -1,0 +1,144 @@
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1370px) {
+	.app .comments .commentsList{
+		height: 400px;
+	}
+	.app .items .itemsList{
+		height: 410px;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1300px) {
+	.app .comments{
+		width: 70%;
+	}
+	.app .items{
+		width: 70%;
+	}
+	.app .items .addItem .addItemInput{
+		width: 60%;
+	}
+	.items .addItem .addItemButton{
+		width: 30%;
+	}
+	.app .navigation{
+		width: 20%;
+	}
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.app .navigation{
+		width: 100% !important;
+		height: auto;
+		padding-bottom: 50px;
+		position: relative;
+	}
+	.app .items{
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+
+	.app .comments{
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
+
+	/*Disable Animation on Mobile Devices*/
+	.animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.app .items .addItem .addItemInput{
+		width: 100% !important;
+	}
+	.app .items .addItem .addItemButton{
+		width: 100% !important;
+		float: none;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.app .items .itemsList li .itemsName{
+		max-width: 100% !important;
+		width: 100% !important;
+		text-align: center;
+	}
+	.app .items .itemsList li .itemsDelete{
+		margin-top: 2px;
+	}
+	.app .comments .commentsList li .commentText{
+		width: 100%;
+		margin-top: 30px;
+	}
+	.app .comments .commentsList li .commentPic{
+		margin: 0 auto;
+		float: none;
+		display: block;
+	}
+	.app .comments .addComment .addCommentText{
+		width: 70%;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
